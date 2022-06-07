@@ -1,0 +1,574 @@
+:root {
+    --zero:#000000;
+    --eerie:#18191A;
+    --gold:#FCC457;
+    --silver:#9DA0A6;
+    --metall:#5B5C60;
+    --paper:#E7E6E5;
+}
+
+body {
+  margin: 0;
+  /*background: var(--eerie);*/
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #18191A;
+  /*margin-block: 5px;*/
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--eerie);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--metall);
+}
+
+lottie-interactive {
+  cursor: pointer;
+}
+
+.background {
+  background: radial-gradient(at 100px 100px, rgba(24,25,26,0) 0%, rgba(24,25,26,1) 50%);
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  position: fixed;
+}
+
+#vanta-canvas {
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+  position: fixed;
+}
+
+.hide {
+  display: none;
+}
+
+.navigation {
+  position: fixed;
+  display: flex;
+  z-index: 4;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(100vw - 180px);
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-top: 68px;
+}
+
+.logo {
+  width: 40px;
+  height: 52px;
+}
+
+.menu_h {
+  float: right;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  width: 440px;
+  height: 40px;
+  padding-top: 12px;
+}
+
+.menu_icon {
+  display: none;
+  width: 40px;
+  height: 40px;
+  padding-top: 12px;
+}
+
+.sidemenu {
+  position: fixed;
+  display: none;
+  z-index: 3;
+  width: 100vw;
+  height: 100vh;
+  background: var(--zero);
+}
+
+.dynamic {
+  position: fixed;
+  z-index: 3;
+  margin-left: 100vw;
+  animation-duration: 600ms;
+  animation-name: slidein;
+}
+
+.opened {
+  animation-duration: 600ms;
+  animation-name: open;
+}
+
+@keyframes open {
+  from {
+      margin-left: 100vw;
+    }
+
+    to {
+      margin-left: 0vw;
+    }
+}
+
+.closed {
+  animation-duration: 600ms;
+  animation-name: close;
+}
+
+@keyframes close {
+  from {
+      margin-left: 0vw;
+    }
+
+    to {
+      margin-left: 100vw;
+    }
+}
+
+.menu_v {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  width: 180px;
+  height: 260px;
+  margin-left: 80px;
+  margin-bottom: 80px;
+  position: absolute;
+  bottom: 0px;
+}
+
+.menu_v_element {
+  height: 50px;
+  padding-bottom: 20px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  z-index: 2;
+  width: calc(100vw - 180px);
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.about {
+  bottom: 0;
+  height: 100vh;
+}
+
+.services {
+  display: flex;
+  flex-direction: row;
+}
+
+.projects_desktop {
+  display: block;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 120px;
+  padding-right: 120px;
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+
+.about_container {
+  position: absolute;
+  bottom: 0px;
+}
+
+.services_section {
+  display: flex;
+  flex-direction: row;
+}
+
+.services_container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 600px;
+}
+
+.list_container {
+  flex-direction: row;
+  max-width: 560px;
+  padding-top: 60px;
+}
+
+.services_cta_desktop {
+  display: block;
+}
+
+.services_cta_mobile {
+  display: none;
+}
+
+.services_list1 {
+  min-width: 200px;
+  margin-right: 160px;
+}
+
+.services_list2 {
+  min-width: 200px;
+  margin-right: 160px;
+}
+
+.project {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 120px;
+  padding-top: 40px;
+  border-bottom: 2px solid var(--paper);
+  transition: 600ms;
+  overflow: hidden;
+}
+
+.project:hover {
+  height: 380px;
+}
+
+.project_description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 200px;
+  margin-right: 80px;
+  height: inherit;
+}
+
+.mention {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  flex-direction: row;
+  width: 180px;
+  max-height: 34px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.rechi_logo {
+  height: 30px;
+  width: 80px;
+}
+
+.project_services {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 920px;
+  padding-right: 60px;
+}
+
+.project_images {
+  position: relative;
+  float: right;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: flex-end;
+  width: 920px;
+  height: inherit;
+  padding-right: 100px;
+}
+
+.project_service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+}
+
+.project_image_container {
+  position: absolute;
+  bottom: 0px;
+  height: 300px;
+  width: 400px;
+  overflow: hidden;
+}
+
+.project_image {
+  transition: 600ms;
+}
+
+.project_image_mobile {
+  height: 300px;
+  width: 400px;
+}
+
+.projects_mobile {
+  display: none;
+}
+
+.project_mobile {
+  border-bottom: 2px solid var(--paper);
+  margin-bottom: 40px;
+}
+
+.project_mobile_service {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.project_mobile_image {
+  overflow: hidden;
+  padding-right: 40px;
+}
+
+.project_mobile_name_mention {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: row;
+}
+
+.contacts_column1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 520px;
+  height: 210px;
+}
+
+.contacts_me {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+
+.contacts_social {
+  padding-top: 60px;
+}
+
+.copyright_desktop {
+  display: block;
+}
+
+.copyright_mobile {
+  display: none;
+}
+
+/*Laptop*/
+@media only screen and (max-width:1366px) {
+  .project_service {
+    width: 180px;
+    margin-right: 20px;
+  }
+
+  .mention {
+    align-items:  flex-start;
+    flex-direction: column;
+    max-height: 60px;
+  }
+}
+
+/*Tablet*/
+@media only screen and (max-width:1280px) {
+  .navigation {
+    width: calc(100vw - 180px);
+  }
+
+  .menu_h {
+    display: none;
+  }
+
+  .menu_icon {
+    display: block;
+  }
+
+  .sidemenu {
+    display: block;
+  }
+
+  .container {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  .services_container {
+    padding-right: 0px;
+  }
+
+  .list_container {
+    flex-direction: column;
+    max-width: 200px;
+  }
+
+  .services_cta_desktop {
+    display: none;
+  }
+
+  .services_cta_mobile {
+    display: block;
+  }
+
+  .services_list1 {
+    padding-bottom: 40px;
+  }
+
+  .projects_desktop {
+    display: none;
+  }
+
+  .projects_mobile {
+    display: block;
+  }
+
+  .mention {
+    align-items:  center;
+    flex-direction: row;
+    max-height: 60px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .rechi_logo {
+    height: 30px;
+    width: 80px;
+  }
+}
+
+/*Mobile*/
+@media only screen and (max-width:480px) {
+  .button {
+    interaction: switch;
+  }
+
+  .navigation {
+    position: absolute;
+    width: calc(100vw - 80px);
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 40px;
+  }
+
+  .logo {
+    width: 30px;
+    height: 40px;
+  }
+
+  .menu_icon {
+    width: 30px;
+    height: 30px;
+    padding-top: 10px;
+  }
+
+  .menu_v {
+    height: 185px;
+    margin-left: 40px;
+    margin-bottom: 40px;
+  }
+
+  .menu_v_element {
+    height: 35px;
+    padding-bottom: 15px;
+  }
+
+  .section {
+    width: calc(100vw - 100px);
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .about {
+    bottom: 0;
+    height: 100vh;
+  }
+
+  .services {
+    flex-direction: column;
+  }
+
+  .container {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .list_container {
+    padding-top: 0px;
+  }
+
+  .services_cta_mobile {
+    padding-top: 20px;
+  }
+
+  .mention {
+    flex-direction: row;
+    overflow: visible;
+    width: 65px;
+    height: 30px;
+  }
+
+  .rechi_logo {
+    height: 25px;
+    width: 65px;
+  }
+
+  .project_mobile_service {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .project_mobile_image {
+    padding-right: 0px;
+  }
+
+  .project_image_mobile {
+    height: auto;
+    width: inherit;
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contacts_column1 {
+    height: auto;
+  }
+
+  .contacts_social {
+    padding-top: 0px;
+  }
+
+
+  .copyright_desktop {
+    display: none;
+  }
+
+  .copyright_mobile {
+    display: block;
+    padding-bottom: 40px;
+  }
+}
