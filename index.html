@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8" />
+      <meta name="theme-color" content="#18191A" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <title>kchrk</title>
+
+      <link rel="icon" href="svg/favicon.svg" type="image/svg+xml">
+      <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+      <link rel="stylesheet" href="css/typography.css">
+      <link rel="stylesheet" href="css/design.css">
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;500&display=swap" rel="stylesheet">
+
+   </head>
+   <body>
+      <main>
+        <div id="navigation" class="navigation">
+          <a href="#">
+            <img class="logo" src="svg/Logo.svg">
+          </a>
+          <div class="menu_h">
+            <a href="#">
+              <lottie-interactive path="animations/navigation_h_1.json" interaction="morph"></lottie-interactive>
+            </a>
+            <a href="#">
+              <lottie-interactive path="animations/navigation_h_2.json" interaction="morph"></lottie-interactive>
+            </a>
+            <a href="#">
+              <lottie-interactive path="animations/navigation_h_3.json" interaction="morph"></lottie-interactive>
+            </a>
+            <a href="#">
+              <lottie-interactive path="animations/navigation_h_4.json" interaction="morph"></lottie-interactive>
+            </a>
+          </div>
+          <div class="menu_icon">
+            <lottie-interactive id="menu_icon" path="animations/menu_icon.json" interaction="switch" onclick="sidemenu_open()"></lottie-interactive>
+          </div>
+        </div>
+        <div id="sidemenu" class="sidemenu dynamic">
+          <div class="menu_v">
+            <a href="#">
+              <lottie-interactive class="menu_v_element" path="animations/navigation_v_1.json" interaction="switch"></lottie-interactive>
+            </a>
+            <a href="#">
+              <lottie-interactive class="menu_v_element" path="animations/navigation_v_2.json" interaction="switch"></lottie-interactive>
+            </a>
+            <a href="#">
+              <lottie-interactive class="menu_v_element" path="animations/navigation_v_3.json" interaction="switch"></lottie-interactive>
+            </a>
+            <a href="#">
+              <lottie-interactive class="menu_v_element" path="animations/navigation_v_4.json" interaction="switch"></lottie-interactive>
+            </a>
+          </div>
+        </div>
+        <div class="content">
+          <div class="section about">
+            <div class="container about_container">
+              <h1>kchrk</h1>
+              <h2>Визуальные вселенные<br>для современных продуктов</h2>
+            </div>
+          </div>
+          <div class="section services">
+            <div class="container services_container">
+              <div>
+                <h1>Услуги</h1>
+                <h3>Индивидуальный подход к решению широкого спектра задач в сферах графического и веб-дизайна. Создание уникального пользовательского опыта в веб и IRL продуктах.</h3>
+              </div>
+              <a class="services_cta_desktop">
+                <lottie-interactive id="button" class="button" path="animations/services_cta.json" interaction="morph"></lottie-interactive>
+              </a>
+              <a class="services_cta_mobile">
+                <lottie-interactive id="button" class="button" path="animations/services_cta.json" interaction="switch"></lottie-interactive>
+              </a>
+            </div>
+            <div class="container list_container">
+              <div class="services_list1">
+                <h6>Графика</h6>
+                <ul>
+                  <li>Создание логотипа</li>
+                  <li>Брендинг</li>
+                  <li>Баннеры и графика</li>
+                  <li>Вёрстка для печати</li>
+                </ul>
+              </div>
+              <div class="services_list2">
+                <h6>Веб</h6>
+                <ul>
+                  <li>Веб-дизайн</li>
+                  <li>Веб-разработка</li>
+                  <li>UI / UX</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="container projects_desktop">
+              <h1 class="h1_projects">Проекты</h1>
+              <!--DÔM-->
+              <div class="project">
+                <div class="project_description">
+                  <div>
+                    <h2 class="h2_projects">DÔM</h2>
+                    <h4 class="h4_projects">Лаундж-бар</h4>
+                  </div>
+                  <div class="mention">
+                    <h5>совместно с</h5>
+                    <a href="https://rechi.media/">
+                      <img class="rechi_logo" src="svg/Rechilogo.svg">
+                    </a>
+                  </div>
+                </div>
+                <div class="project_images">
+                  <a href="#" class="project_service" onmouseover="show1()" onmouseout="hide1()">
+                    <h4 id="descriptor1">Создание логотипа</h4>
+                    <div class="project_image_container">
+                      <div id="project_image1" class="project_image" style="transform: translate3d(0px, 360px, 0px);">
+                        <lottie-interactive path="animations/project_image_logo_DOM.json" interaction="morph"></lottie-interactive>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="project_service" onmouseover="show2()" onmouseout="hide2()">
+                    <h4 id="descriptor2">Брендинг</h4>
+                    <div class="project_image_container">
+                      <div id="project_image2" class="project_image" style="transform: translate3d(0px, 360px, 0px);">
+                        <lottie-interactive path="animations/project_image_branding_DOM.json" interaction="morph"></lottie-interactive>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="project_service" onmouseover="show3()" onmouseout="hide3()">
+                    <h4 id="descriptor3">Вёрстка для печати</h4>
+                    <div class="project_image_container">
+                      <div id="project_image3" class="project_image" style="transform: translate3d(0px, 360px, 0px);">
+                        <lottie-interactive path="animations/project_image_polygraphy_DOM.json" interaction="morph"></lottie-interactive>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <!--PowerApp-->
+              <div class="project">
+                <div class="project_description">
+                  <div>
+                    <h2 class="h2_projects">PowerApp</h2>
+                    <h4 class="h4_projects">Шеринг зарядных устройств</h4>
+                  </div>
+                  <div class="mention">
+                    <h5>совместно с</h5>
+                    <a href="https://rechi.media/">
+                      <img class="rechi_logo" src="svg/Rechilogo.svg">
+                    </a>
+                  </div>
+                </div>
+                <div class="project_images">
+                  <a href="" class="project_service">
+                    <h4></h4>
+                    <div class="project_image_container">
+                      <div id="" class="project_image" style="">
+                        <img src=""></img>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="project_service" onmouseover="show4()" onmouseout="hide4()">
+                    <h4 id="descriptor4">Вёрстка для печати</h4>
+                    <div class="project_image_container">
+                      <div id="project_image4" class="project_image" style="transform: translate3d(0px, 360px, 0px);">
+                        <lottie-interactive path="animations/project_image_polygraphy_PowerApp.json" interaction="morph"></lottie-interactive>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="project_service" onmouseover="show5()" onmouseout="hide5()">
+                    <h4 id="descriptor5">UI / UX</h4>
+                    <div class="project_image_container">
+                      <div id="project_image5" class="project_image" style="transform: translate3d(0px, 360px, 0px);">
+                        <lottie-interactive path="animations/project_image_UIUX_PowerApp.json" interaction="morph"></lottie-interactive>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <!--БашГУ-->
+              <div class="project">
+                <div class="project_description">
+                  <div>
+                    <h2 class="h2_projects">БашГУ</h2>
+                    <h4 class="h4_projects">Учебное заведение</h4>
+                  </div>
+                  <div class="mention">
+                    <h5></h5>
+                    <a href="#">
+                      <img src="">
+                    </a>
+                  </div>
+                </div>
+                <div class="project_images">
+                  <a href="#" class="project_service" onmouseover="show6()" onmouseout="hide6()">
+                    <h4 id="descriptor6">Создание логотипа</h4>
+                    <div class="project_image_container">
+                      <div id="project_image6" class="project_image" style="transform: translate3d(0px, 360px, 0px);">
+                        <lottie-interactive path="animations/project_image_logo_110.json" interaction="morph"></lottie-interactive>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="project_service" onmouseover="show7()" onmouseout="hide7()">
+                    <h4 id="descriptor7">Брендинг</h4>
+                    <div class="project_image_container">
+                      <div id="project_image7" class="project_image" style="transform: translate3d(0px, 360px, 0px);">
+                        <lottie-interactive path="animations/project_image_branding_110.json" interaction="morph"></lottie-interactive>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="project_service" onmouseover="show8()" onmouseout="hide8()">
+                    <h4 id="descriptor8">Вёрстка для печати</h4>
+                    <div class="project_image_container">
+                      <div id="project_image8" class="project_image" style="transform: translate3d(0px, 360px, 0px);">
+                        <lottie-interactive path="animations/project_image_polygraphy_110.json" interaction="morph"></lottie-interactive>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="container projects_mobile">
+              <h1 class="h1_projects">Проекты</h1>
+              <!--DÔM-->
+              <div class="project_mobile">
+                <div class="project_mobile_description">
+                  <div class="project_mobile_name_mention">
+                    <h2 class="h2_projects">DÔM</h2>
+                    <div class="mention">
+                      <h5 class="h5_mention_none">совместно с</h5>
+                      <a href="https://rechi.media/">
+                        <img class="rechi_logo" src="svg/Rechilogo.svg">
+                      </a>
+                    </div>
+                  </div>
+                  <h4 class="h4_projects">Лаундж-бар</h4>
+                </div>
+                <div class="project_mobile_services">
+                  <a href="#" class="project_mobile_service">
+                    <h4>Создание логотипа</h4>
+                    <lottie-player class="project_image_mobile" src="animations/project_image_logo_DOM_loop.json" speed="1" loop autoplay></lottie-player>
+                  </a>
+                  <a href="#" class="project_mobile_service">
+                    <h4>Брендинг</h4>
+                    <lottie-player class="project_image_mobile" src="animations/project_image_branding_DOM_loop.json" speed="1" loop autoplay></lottie-player>
+                  </a>
+                  <a href="#" class="project_mobile_service">
+                    <h4>Вёрстка для печати</h4>
+                    <lottie-player class="project_image_mobile" src="animations/project_image_polygraphy_DOM_loop.json" speed="1" loop autoplay></lottie-player>
+                  </a>
+                </div>
+              </div>
+              <!--PowerApp-->
+              <div class="project_mobile">
+                <div class="project_mobile_description">
+                  <div class="project_mobile_name_mention">
+                    <h2 class="h2_projects">PowerApp</h2>
+                    <div class="mention">
+                      <h5 class="h5_mention_none">совместно с</h5>
+                      <a href="https://rechi.media/">
+                        <img class="rechi_logo" src="svg/Rechilogo.svg">
+                      </a>
+                    </div>
+                  </div>
+                  <h4 class="h4_projects">Шеринг зарядных устройств</h4>
+                </div>
+                <div class="project_mobile_services">
+                  <a href="#" class="project_mobile_service">
+                    <h4>Вёрстка для печати</h4>
+                    <lottie-player class="project_image_mobile" src="animations/project_image_polygraphy_PowerApp_loop.json" speed="1" loop autoplay></lottie-player>
+                  </a>
+                  <a href="#" class="project_mobile_service">
+                    <h4>UI / UX</h4>
+                    <lottie-player class="project_image_mobile" src="animations/project_image_UIUX_PowerApp_loop.json" speed="1" loop autoplay></lottie-player>
+                  </a>
+                </div>
+              </div>
+              <!--БашГУ-->
+              <div class="project_mobile">
+                <div class="project_mobile_description">
+                  <div class="project_mobile_name_mention">
+                    <h2 class="h2_projects">БашГУ</h2>
+                  </div>
+                  <h4 class="h4_projects">Учебное заведение</h4>
+                </div>
+                <div class="project_mobile_services">
+                  <a href="#" class="project_mobile_service">
+                    <h4>Создание логотипа</h4>
+                    <lottie-player class="project_image_mobile" src="animations/project_image_logo_110_loop.json" speed="1" loop autoplay></lottie-player>
+                  </a>
+                  <a href="#" class="project_mobile_service">
+                    <h4>Брендинг</h4>
+                    <lottie-player class="project_image_mobile" src="animations/project_image_branding_110_loop.json" speed="1" loop autoplay></lottie-player>
+                  </a>
+                  <a href="#" class="project_mobile_service">
+                    <h4>Вёрстка для печати</h4>
+                    <lottie-player class="project_image_mobile" src="animations/project_image_polygraphy_110_loop.json" speed="1" loop autoplay></lottie-player>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section contacts">
+            <div class="container">
+              <h1>Контакты</h1>
+              <div class="contacts_column1">
+                <div class="contacts_me">
+                  <h6>Кучерюк Сергей</h6>
+                  <h4 class="h4_contacts">Графический / Веб дизайнер</h4>
+                  <ul>
+                    <li>kchrk.design@gmail.com</li>
+                    <li>+7 (917) 798-87-51</li>
+                  </ul>
+                </div>
+                <h5 class="copyright_desktop">© kchrk 2022</h5>
+              </div>
+            </div>
+            <div class="container">
+              <div class="contacts_social">
+                <h6>Напишите мне</h6>
+                <a href="#" class="a_social">Telegram</a>
+                <a href="#" class="a_social">Instagram</a>
+              </div>
+            </div>
+            <h5 class="copyright_mobile">© kchrk 2022</h5>
+          </div>
+        </div>
+        <div class="background"></div>
+      </main>
+      <script src="scripts/p5.min.js"></script>
+      <script src="scripts/p5-background.js"></script>
+      <script src="scripts/scripts.js"></script>
+      <script src="scripts/lottie_animations.js"></script>
+      <script type="text/javascript" src="scripts/lottie-interactive.js"></script>
+      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+      <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+   </body>
+</html>
